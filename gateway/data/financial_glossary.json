@@ -1,0 +1,242 @@
+{
+  "cmp": {
+    "term": "CMP (Current Market Price)",
+    "category": "Pricing & Execution",
+    "eli5": "The exact price at which a stock was last bought or sold on the National Stock Exchange (NSE) or Bombay Stock Exchange (BSE).",
+    "formula": "Last recorded match price between buyer bid and seller ask.",
+    "whyItMatters": "CMP tells you what you need to pay right now to own 1 share of the company.",
+    "benchmarks": {
+      "green": "Reasonable entry price when backed by growing revenues and low debt.",
+      "red": "CMP inflated far beyond the company's real underlying earnings power."
+    },
+    "example": "If Reliance trades at ₹1,202.00 on the NSE feed, that ₹1,202.00 is its CMP."
+  },
+  "peRatio": {
+    "term": "P/E Ratio (Price-to-Earnings)",
+    "category": "Valuation",
+    "eli5": "How many rupees investors are willing to pay for every ₹1 of annual profit earned by the company.",
+    "formula": "Current Market Price (CMP) ÷ Earnings Per Share (EPS Trailing TTM)",
+    "whyItMatters": "It is the primary measuring tape of whether a stock is cheap or expensive compared to peers.",
+    "benchmarks": {
+      "green": "15x – 28x is standard for stable Indian blue-chip companies.",
+      "red": "> 60x without fast profit growth indicates overvaluation or bubble risk."
+    },
+    "example": "If a company earns ₹50 EPS and trades at ₹1,000 CMP, its P/E is 20x."
+  },
+  "industryPe": {
+    "term": "Industry P/E",
+    "category": "Valuation Benchmark",
+    "eli5": "The average Price-to-Earnings multiple across all listed peer companies in the same industry.",
+    "formula": "Average P/E of all listed companies in the specific industry sector.",
+    "whyItMatters": "Comparing a stock's P/E to its Industry P/E reveals if it enjoys a quality premium or trades at a discount.",
+    "benchmarks": {
+      "green": "Trading below or inline with Industry P/E with superior margins.",
+      "red": "Trading at 3x the Industry P/E without higher profit compounding."
+    },
+    "example": "If Indian IT sector average P/E is 27x and Infosys trades at 25x, Infosys is trading at a sector discount."
+  },
+  "pbRatio": {
+    "term": "P/B Ratio (Price-to-Book)",
+    "category": "Valuation",
+    "eli5": "Compares current stock price against the net tangible liquidation value of the balance sheet.",
+    "formula": "Current Market Price (CMP) ÷ Book Value Per Share (BVPS)",
+    "whyItMatters": "Essential for valuing banks, NBFCs, and asset-heavy industries like steel and energy.",
+    "benchmarks": {
+      "green": "Banks: 1.5x – 2.8x is healthy. Manufacturing: < 3x.",
+      "red": "Excessive P/B (> 8x) in capital-intensive manufacturing signals speculative risk."
+    },
+    "example": "A P/B of 2.0x means you pay ₹2 in the market for every ₹1 of net accounting assets."
+  },
+  "roe": {
+    "term": "ROE (Return on Equity)",
+    "category": "Profitability",
+    "eli5": "Measures how efficiently management turns shareholders' equity into net profit.",
+    "formula": "(Net Annual Profit ÷ Total Shareholders' Equity) × 100",
+    "whyItMatters": "High ROE proves management can generate strong profits without constant equity dilution.",
+    "benchmarks": {
+      "green": "ROE > 18% is great in India; > 25% is world-class (e.g. TCS).",
+      "red": "ROE < 10% means returns lag corporate borrowing rates or safe fixed deposits."
+    },
+    "example": "If a company has ₹1,000 Cr net worth and makes ₹250 Cr net profit, ROE is 25%."
+  },
+  "roce": {
+    "term": "ROCE (Return on Capital Employed)",
+    "category": "Capital Efficiency",
+    "eli5": "The gold-standard test of capital efficiency: how much operating profit is generated from ALL capital (Equity + Debt).",
+    "formula": "(Operating Profit EBIT ÷ Capital Employed [Total Assets - Current Liabilities]) × 100",
+    "whyItMatters": "Unlike ROE (which can be masked by taking loans), ROCE shows if debt is generating real profits.",
+    "benchmarks": {
+      "green": "ROCE > 20% indicates a strong economic moat and sustainable pricing power.",
+      "red": "ROCE < 12% means returns barely cover the cost of debt."
+    },
+    "example": "TCS generates ~60% ROCE, meaning every ₹100 of capital employed yields ~₹60 in annual EBIT."
+  },
+  "debtToEquity": {
+    "term": "Debt-to-Equity Ratio (D/E)",
+    "category": "Financial Solvency",
+    "eli5": "Shows how heavily the company relies on borrowed loans compared to shareholders' equity.",
+    "formula": "Total Borrowings ÷ Total Shareholders' Equity",
+    "whyItMatters": "High debt creates high interest obligations during economic slowdowns or rising rate cycles.",
+    "benchmarks": {
+      "green": "D/E < 0.5x is conservative and very safe.",
+      "red": "D/E > 1.5x in non-banking companies poses severe solvency danger."
+    },
+    "example": "A D/E of 0.1x means the company has only ₹10 of debt for every ₹100 of net worth."
+  },
+  "marketCap": {
+    "term": "Market Capitalization (Mar Cap)",
+    "category": "Company Size",
+    "eli5": "The total rupee value of all the company's shares combined.",
+    "formula": "Current Market Price (CMP) × Total Number of Issued Shares",
+    "whyItMatters": "Classifies Indian stocks into Large Cap (> ₹20,000 Cr), Mid Cap (₹5,000 - ₹20,000 Cr), and Small Cap (< ₹5,000 Cr).",
+    "benchmarks": {
+      "green": "Large caps offer institutional stability and high liquidity.",
+      "red": "Micro-caps (< ₹500 Cr) carry illiquidity and sharp swing risks."
+    },
+    "example": "Reliance Industries has an M-Cap of ~₹18 Lakh Crore, making it India's largest enterprise."
+  },
+  "dividendYield": {
+    "term": "Dividend Yield %",
+    "category": "Cash Returns",
+    "eli5": "The annual cash payout distributed directly to shareholder bank accounts as a percentage of share price.",
+    "formula": "(Annual Dividend Per Share ÷ Current Market Price) × 100",
+    "whyItMatters": "Provides steady passive income even during sideways or bear market phases.",
+    "benchmarks": {
+      "green": "2.0% – 4.5% is a healthy dividend yield for cash-generative Indian companies (e.g. ITC).",
+      "red": "0% in mature companies with no growth, or > 10% signaling dividend trap."
+    },
+    "example": "If ITC pays ₹14.50 dividend per share and trades at ₹462, the yield is ~3.15%."
+  },
+  "netProfit": {
+    "term": "NP Qtr (Quarterly Net Profit)",
+    "category": "Quarterly Performance",
+    "eli5": "The bottom-line profit after paying all operating expenses, depreciation, interest, and taxes for the latest quarter.",
+    "formula": "Total Revenue minus Total Expenses (Operating, Interest, Tax)",
+    "whyItMatters": "Quarterly net profit directly drives market expectations and institutional buying interest.",
+    "benchmarks": {
+      "green": "Growing Net Profit with double-digit profit margins (> 15%).",
+      "red": "Dipping into losses or declining profit margins YoY."
+    },
+    "example": "TCS reports ~₹12,000 Cr net profit per quarter."
+  },
+  "profitVariance": {
+    "term": "Qtr Profit Var %",
+    "category": "Quarterly Performance",
+    "eli5": "The percentage growth or decline in net profit compared to the same quarter last year (YoY) or prior quarter (QoQ).",
+    "formula": "[(Current Qtr Profit - Previous Qtr Profit) ÷ Previous Qtr Profit] × 100",
+    "whyItMatters": "Earnings acceleration or deceleration dictates whether the stock gets re-rated higher or lower.",
+    "benchmarks": {
+      "green": "Positive profit variance > 12% indicates robust earnings acceleration.",
+      "red": "Negative profit variance indicates slowing demand or margin compression."
+    },
+    "example": "+18.5% YoY profit variance signals the company is expanding profits faster than inflation."
+  },
+  "quarterlySales": {
+    "term": "Sales Qtr (Quarterly Revenue)",
+    "category": "Quarterly Performance",
+    "eli5": "The total top-line revenue collected from products sold or services delivered during the quarter.",
+    "formula": "Sum of all sales invoices and contract revenue realized in the quarter.",
+    "whyItMatters": "Revenue growth is the foundational engine of business expansion; profit cannot grow indefinitely without sales growth.",
+    "benchmarks": {
+      "green": "Steady 10% – 20% annualized revenue compounding.",
+      "red": "Stagnant or declining sales indicating loss of market share."
+    },
+    "example": "Reliance quarterly revenue exceeds ₹2.3 Lakh Crore across energy, retail, and digital."
+  },
+  "salesVariance": {
+    "term": "Qtr Sales Var %",
+    "category": "Quarterly Performance",
+    "eli5": "The percentage expansion or contraction in total revenue compared to prior reporting period.",
+    "formula": "[(Current Qtr Sales - Prior Qtr Sales) ÷ Prior Qtr Sales] × 100",
+    "whyItMatters": "Tracks commercial market share gains and customer demand velocity.",
+    "benchmarks": {
+      "green": "> 10% YoY sales growth for large caps; > 20% for mid-caps.",
+      "red": "Negative sales variance signaling softening demand."
+    },
+    "example": "+14.2% sales variance means business scale expanded by 14.2% YoY."
+  },
+  "rsi": {
+    "term": "RSI-14 (Relative Strength Index)",
+    "category": "Technical Momentum",
+    "eli5": "A momentum oscillator scaled 0 to 100 measuring the speed and size of recent price changes.",
+    "formula": "100 - [100 ÷ (1 + Average Gain ÷ Average Loss)] over 14 candles.",
+    "whyItMatters": "Alerts you if buyers pushed the price too high (Overbought) or sellers panicked too hard (Oversold).",
+    "benchmarks": {
+      "green": "45 – 65: Ideal trending momentum zone.",
+      "red": "> 70: Overbought (pullback risk); < 30: Oversold (potential bounce)."
+    },
+    "example": "An RSI of 58 confirms steady upward momentum without being overextended."
+  },
+  "macdSignal": {
+    "term": "MACD (Moving Average Convergence Divergence)",
+    "category": "Technical Momentum",
+    "eli5": "A trend-following momentum indicator displaying the distance between fast (12-period) and slow (26-period) EMAs.",
+    "formula": "12-period EMA minus 26-period EMA; triggered by 9-period Signal line.",
+    "whyItMatters": "A Bullish Crossover (MACD crossing above signal line) signals the start of a fresh upward impulse.",
+    "benchmarks": {
+      "green": "Bullish Crossover above zero line indicates strong buyer control.",
+      "red": "Bearish Crossover below zero line indicates intensifying downward pressure."
+    },
+    "example": "A fresh Bullish MACD crossover on the 15-minute chart triggers intraday long momentum."
+  },
+  "investiqScore": {
+    "term": "InvestIQ Company Score",
+    "category": "Composite Intelligence",
+    "eli5": "A comprehensive 0 to 100 rating synthesized across 5 key pillars of financial and market strength.",
+    "formula": "Fundamentals (35 pts) + Technicals (30 pts) + Volume/Perf (15 pts) + News Sentiment (10 pts) + Valuation (10 pts)",
+    "whyItMatters": "Gives investors an instant, holistic view of whether a company is fundamentally sound, technically strong, and attractively valued.",
+    "benchmarks": {
+      "green": "Score >= 70 (Strong Outlook): High quality, positive momentum, sound balance sheet.",
+      "red": "Score < 45 (Weaker / High Risk): Multiple headwinds across valuation, debt, or technicals."
+    },
+    "example": "A score of 78/100 signifies strong fundamentals with bullish technical alignment."
+  },
+  "mlPrediction": {
+    "term": "ML Price Forecast (Random Forest)",
+    "category": "Machine Learning Lab",
+    "eli5": "A multi-horizon machine learning model trained on historical volatility, returns, ATR, VWAP gap, and volume.",
+    "formula": "Ensemble Random Forest classifier & regressor predicting price direction and range for 1d, 2d, 3d, or 1w horizons.",
+    "whyItMatters": "Provides algorithmic probability of price continuation vs reversal based on historical patterns.",
+    "benchmarks": {
+      "green": "Bullish model direction aligned with positive volume ratio and RSI momentum.",
+      "red": "Bearish model direction warning of mean-reversion or breakdown risk."
+    },
+    "example": "Predicted close of ₹1,215 with range ₹1,195 – ₹1,230 on a 1-day horizon."
+  },
+  "candleOHLCV": {
+    "term": "OHLCV Candlestick",
+    "category": "Chart Analytics",
+    "eli5": "A Japanese candlestick displaying Open, High, Low, Close, and Volume for a specific timeframe.",
+    "formula": "Body shows Open to Close; wicks show High and Low; volume bar shows total traded shares.",
+    "whyItMatters": "Shows the battle between bulls and bears during that specific trading interval.",
+    "benchmarks": {
+      "green": "Green candle: Close > Open (buyers won the interval).",
+      "red": "Red candle: Close < Open (sellers pushed price down)."
+    },
+    "example": "A 10-minute candle showing Open ₹3,450, High ₹3,465, Low ₹3,448, Close ₹3,462 with 250k volume."
+  },
+  "intraday10m": {
+    "term": "10-Minute Completed Candle",
+    "category": "Intraday Aggregation",
+    "eli5": "A completed 10-minute chart bar accurately aggregated from two consecutive 5-minute exchange candles.",
+    "formula": "Open of candle 1, Max High of both, Min Low of both, Close of candle 2, Summed Volume.",
+    "whyItMatters": "Smooths out noisy 5-minute intraday fluctuations while preserving timely entry/exit signals.",
+    "benchmarks": {
+      "green": "Higher highs and higher lows on consecutive 10m candles indicate intraday trend continuation.",
+      "red": "Bearish engulfing pattern on high volume signaling intraday reversal."
+    },
+    "example": "Aggregated from 09:15-09:20 and 09:20-09:25 candles to produce the 09:15-09:25 10m bar."
+  },
+  "compositeRating": {
+    "term": "FinClash Multi-Factor Scorecard",
+    "category": "Comparative Analytics",
+    "eli5": "A head-to-head scorecard evaluating two companies across 10 critical financial and operational dimensions.",
+    "formula": "Winner determined by comparing P/E, ROE, ROCE, D/E, Margins, Growth, Technicals, and Sentiment.",
+    "whyItMatters": "Instantly settles stock debates by showing which company dominates the key fundamental and technical metrics.",
+    "benchmarks": {
+      "green": "Winning 7+ out of 10 categories demonstrates clear sector leadership.",
+      "red": "Losing both valuation and efficiency categories flags underperformance."
+    },
+    "example": "In TCS vs INFY, TCS secures wins in ROCE (61% vs 31%) and Operating Margin (24.6% vs 20.8%)."
+  }
+}

@@ -1,0 +1,6 @@
+pandas>=2.2,<4
+numpy>=2.0,<3
+scikit-learn>=1.5,<2
+matplotlib>=3.9,<4
+yfinance>=0.2.55,<1
+# Optional Bedrock explanation adapter: boto3>=1.35

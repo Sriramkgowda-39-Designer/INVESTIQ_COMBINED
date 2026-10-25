@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestIQ AI Co-Pilot Test Bench</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Marked for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">📈</div>
+                <div class="brand-text">
+                    <h2>InvestIQ</h2>
+                    <span class="badge">AI Co-Pilot</span>
+                </div>
+            </div>
+
+            <div class="status-panel">
+                <div class="status-indicator">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span id="status-text">Connecting...</span>
+                </div>
+                <div class="model-info">
+                    <span class="meta-label">Model:</span>
+                    <span class="meta-val" id="model-val">openai/gpt-oss-120b</span>
+                </div>
+                <div class="active-stock-info" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border-color); display: flex; justify-content: space-between;">
+                    <span class="meta-label">Active Stock:</span>
+                    <span class="meta-val" id="active-stock-display" style="color: #58a6ff; font-weight: 600;">None</span>
+                </div>
+            </div>
+
+            <div class="quick-prompts">
+                <h3>Multi-Turn Conversation Flow</h3>
+                <button class="prompt-chip" data-metric="cmp" onclick="sendQuickPrompt('CMP of Reliance?')">
+                    1️⃣ CMP of Reliance?
+                </button>
+                <button class="prompt-chip" data-metric="peRatio" onclick="sendQuickPrompt('Give me its P/E')">
+                    2️⃣ Give me its P/E
+                </button>
+                <button class="prompt-chip" data-metric="dividendYield" onclick="sendQuickPrompt('What about its dividend?')">
+                    3️⃣ What about its dividend?
+                </button>
+                <button class="prompt-chip" data-metric="intraday10m" onclick="sendQuickPrompt('Give me its 10-minute candle')">
+                    4️⃣ Give me its 10-minute candle
+                </button>
+                <button class="prompt-chip" data-metric="compositeRating" onclick="sendQuickPrompt('Compare it with TCS')">
+                    5️⃣ Compare it with TCS
+                </button>
+                <button class="prompt-chip" onclick="sendQuickPrompt('Now check Infosys')">
+                    6️⃣ Now check Infosys
+                </button>
+                <button class="prompt-chip" data-metric="roce" onclick="sendQuickPrompt('Give me its ROCE')">
+                    7️⃣ Give me its ROCE
+                </button>
+                <button class="prompt-chip" data-metric="investiqScore" onclick="sendQuickPrompt('Full study on Reliance')">
+                    📊 Full 9-Metric Study + Score
+                </button>
+            </div>
+
+            <div class="context-config">
+                <h3>Page Simulation Context</h3>
+                <label>Active Stock Context:</label>
+                <input type="text" id="ctx-stock" placeholder="e.g. RELIANCE, TCS, AAPL">
+                <label>Active Page View:</label>
+                <select id="ctx-page">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="stock_details">Stock Details (Search)</option>
+                    <option value="candles_15m">15m Candlestick Chart</option>
+                    <option value="comparison">Company Comparison Tool</option>
+                </select>
+                <button class="btn-clear" onclick="clearChat()">🧹 Clear Conversation</button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <div>
+                    <h1>AI Market Assistant</h1>
+                    <p class="subtitle">Live financial data integration with Google Gemini intelligence</p>
+                </div>
+                <div class="header-links">
+                    <a href="/docs" target="_blank" class="docs-link">Swagger API Docs ↗</a>
+                </div>
+            </header>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message system-message">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">
+                        <strong>InvestIQ AI Assistant Ready</strong>
+                        <p>Ask me anything about stocks, technical indicators (RSI, MACD, moving averages), company fundamentals (P/E, CMP, Dividends, ROE), news sentiment, or comparisons between any two companies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <form id="chat-form" onsubmit="handleChatSubmit(event)">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="user-input" 
+                            placeholder="Ask about CMP, P/E, compare two stocks, or ask about website charts..." 
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" id="send-btn" class="send-button">
+                            <span>Send</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
